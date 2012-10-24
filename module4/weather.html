@@ -20,6 +20,10 @@
 				var weatherTemp = document.getElementsByClassName("weather-temp")[0];
 				weatherTemp.appendChild(document.createTextNode(jsonData.current.temp));
 				
+				var timg = new Image();
+				timg.src = 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png';
+				timg.alt = 'Tomorrow';
+				weatherTomorrow.appendChild(timg);
 				var tomorrowImg = document.createElement("img");
 				tomorrowImg.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png');
 				tomorrowImg.setAttribute('alt', 'Tomorrow');
