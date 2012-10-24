@@ -23,11 +23,12 @@
 				var timg = new Image();
 				timg.src = 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png';
 				timg.alt = 'Tomorrow';
-				weatherTomorrow.appendChild(timg);
 				var tomorrowImg = document.createElement("img");
 				tomorrowImg.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png');
 				tomorrowImg.setAttribute('alt', 'Tomorrow');
 				var weatherTomorrow = document.getElementsByClassName("weather-tomorrow")[0];
+
+				weatherTomorrow.appendChild(timg);
 				weatherTomorrow.appendChild(tomorrowImg);
 				var dayAfterTomorrowImg = document.createElement("img");
 				dayAfterTomorrowImg.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.dayafter.code+'ds.png');
