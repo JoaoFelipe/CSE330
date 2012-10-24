@@ -20,21 +20,15 @@
 				var weatherTemp = document.getElementsByClassName("weather-temp")[0];
 				weatherTemp.appendChild(document.createTextNode(jsonData.current.temp));
 				
-				var timg = new Image();
-				timg.src = 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png';
-				timg.alt = 'Tomorrow';
-				var tomorrowImg = document.createElement("img");
-				tomorrowImg.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png');
-				tomorrowImg.setAttribute('alt', 'Tomorrow');
 				var weatherTomorrow = document.getElementsByClassName("weather-tomorrow")[0];
 
-				weatherTomorrow.appendChild(timg);
-				weatherTomorrow.appendChild(tomorrowImg);
-				var dayAfterTomorrowImg = document.createElement("img");
-				dayAfterTomorrowImg.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.dayafter.code+'ds.png');
-				dayAfterTomorrowImg.setAttribute('alt', 'Day After Tomorrow');
+				weatherTomorrow.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.tomorrow.code+'ds.png');
+				weatherTomorrow.setAttribute('alt', 'Tomorrow');
+				
 				var weatherAfterTomorrow = document.getElementsByClassName("weather-dayaftertomorrow")[0];
-				weatherAfterTomorrow.appendChild(dayAfterTomorrowImg);
+				
+				weatherAfterTomorrow.setAttribute('src', 'http://us.yimg.com/i/us/nws/weather/gr/'+jsonData.dayafter.code+'ds.png');
+				weatherAfterTomorrow.setAttribute('alt', 'Day After Tomorrow');
 			        //the_object = JSON.parse( http_request.responseText );
 
        		}, false);
